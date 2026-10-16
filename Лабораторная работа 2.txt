@@ -1,0 +1,51 @@
+#include <locale.h>
+#include <stdio.h>
+int z_1();
+int z_2();
+int z_3();
+
+int main()
+{
+	setlocale(LC_ALL, "RUS");
+	z_1();
+	z_2();
+	z_3();
+	return 0;
+} 
+int z_1()
+{
+	int a = 1;
+	int b = 2;
+	int c = 3;
+	int d = 4;
+	printf(" %d\n \t%d\n \t\t%d\n \t\t\t%d\n", a, b, c, d);
+	printf(" %-10.5f\n", 12.234657);
+	printf(" Остаток от деления %d на %d равен %d\n ", 5, 2, 5 % 2);
+	printf("%1.0f разделить на %1.0f равно %1.2f\n ", 7., 5., 7. / 5.);
+	printf("%d умножить на %d равно %d\n ", 2000, 4, 2000 * 4);
+	printf("%g разделить на %e равно %f\n\n ", 5.,2000000., 5. / 2000000);
+	return 0;
+	getchar(); 
+}
+int z_2()
+{
+	float N = 15;
+	float K = 10;
+	printf("Сейчас %1.0f часов %1.0f минут 00 секунд\n", N, K);
+	printf(" Идет %1.0f минута суток\n", N * 60 + K);
+	printf(" До полуночи осталось %1.0f часов и %1.0f минут\n", 24. - N, 60. - K);
+	printf(" С 8.00 прошло %1.0f секунд\n", (N - 8.) * 3600 + K * 60);
+	printf(" Текущий час  = %1.2f суток  и текущая минута = %1.2f часа\n\n", N / 24., K / 60.);
+	return 0;
+	getchar(); 
+}
+int z_3()
+{
+	float L = 733;
+	float n = 2;
+	int k = 3;
+	int m = 7;
+	printf(" Дано:\n \t  %.0f\n  \t%.0f\n        _____________ \nОтвет:\n \t%+0*.*f\n\n", n, L, k + m + 1+ 1, m, n / L);
+	return 0;
+	getchar(); 
+}
